@@ -1,4 +1,4 @@
-import { BookOpen } from 'lucide-react';
+// import { BookOpen } from 'lucide-react';
 interface HeroBookProps {
     title?: string;
     author?: string; // Not in design but good to have

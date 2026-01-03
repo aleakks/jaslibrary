@@ -32,7 +32,7 @@ export const BarcodeScanner = ({ onScanSuccess }: BarcodeScannerProps) => {
                     (decodedText: string) => {
                         if (isMounted) onScanSuccess(decodedText);
                     },
-                    (error: any) => {
+                    () => {
                         // console.warn(error); // Ignore scan errors they are spammy
                     }
                 );

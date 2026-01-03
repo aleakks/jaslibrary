@@ -50,7 +50,7 @@ export const BottomNav = () => {
                         <NavItem to="/add" icon={Plus} label="Add" isMain />
                     </div>
                     <NavItem to="/wishlist" icon={Heart} label="Wishlist" />
-                    <NavItem to="/stats" icon={BarChart2} label="Stats" />
+                    <NavItem to="/stats" icon={BarChart3} label="Stats" />
                 </div>
             </div>
         </div>

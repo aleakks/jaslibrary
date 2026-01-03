@@ -1,4 +1,4 @@
-import { Bell, Sparkles } from 'lucide-react';
+import { Bell, Sparkles, Book } from 'lucide-react';
 
 export const Header = () => {
     return (

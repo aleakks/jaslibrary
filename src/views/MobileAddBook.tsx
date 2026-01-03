@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { X, Check } from 'lucide-react';
 import { BarcodeScanner } from '../components/scanner/BarcodeScanner';
@@ -8,7 +8,7 @@ import { supabase } from '../lib/supabase';
 export const MobileAddBook = () => {
     const navigate = useNavigate();
     const [step, setStep] = useState<'scan' | 'confirm' | 'success'>('scan');
-    const [manualIsbn, setManualIsbn] = useState<string>('');
+    const [, setManualIsbn] = useState<string>(''); // manualIsbn unused for now
     const [bookData, setBookData] = useState<any>(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -36,11 +36,11 @@ export const MobileAddBook = () => {
                 setStep('confirm');
             } else {
                 setError("Book not found. Try scanning again.");
-                setScannedIsbn(null);
+                setManualIsbn('');
             }
         } catch (err) {
             setError("Failed to fetch book data.");
-            setScannedIsbn(null);
+            setManualIsbn('');
         } finally {
             setLoading(false);
         }

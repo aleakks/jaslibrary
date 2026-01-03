@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Trophy, Edit2, Check } from 'lucide-react';
 
 interface ReadingGoalProps {
