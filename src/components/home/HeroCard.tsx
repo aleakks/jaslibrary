@@ -1,6 +1,4 @@
-import React from 'react';
-
-// Using static data for now as per plan
+import { BookOpen } from 'lucide-react';
 interface HeroBookProps {
     title?: string;
     author?: string; // Not in design but good to have

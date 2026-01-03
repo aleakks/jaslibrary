@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { HeroCard } from '../components/home/HeroCard';
 import { BookRow } from '../components/home/BookRow';
 import { useBooks, useReadingNow } from '../hooks/useBooks';
@@ -9,8 +9,8 @@ import { ReadingGoal } from '../components/home/ReadingGoal';
 import type { Book } from '../types/book';
 
 export const HomeView = () => {
-    const { data: books, isLoading: booksLoading, error, updateBook, deleteBook } = useBooks();
-    const { data: readingNow, isLoading: readingLoading } = useReadingNow();
+    const { data: books, error, updateBook, deleteBook } = useBooks();
+    const { data: readingNow } = useReadingNow();
 
     // Sheet State
     const [selectedBook, setSelectedBook] = useState<Book | null>(null);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { X, Trash2, Edit2, BookOpen, Clock, CheckCircle } from 'lucide-react';
 import type { Book } from '../../types/book';
 import { CoverSearchSheet } from './CoverSearchSheet';

@@ -1,5 +1,4 @@
-import React from 'react';
-import { Book } from 'lucide-react';
+import { Bell, Sparkles } from 'lucide-react';
 
 export const Header = () => {
     return (

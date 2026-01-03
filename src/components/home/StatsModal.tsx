@@ -1,7 +1,6 @@
-import React, { useMemo } from 'react';
-import { X, Trophy, BookOpen, Users, TrendingUp, BarChart3, Medal } from 'lucide-react';
+import { useMemo } from 'react';
+import { X, Trophy, BookOpen, Users, TrendingUp, BarChart3 } from 'lucide-react';
 import type { Book } from '../../types/book';
-import clsx from 'clsx';
 
 interface StatsModalProps {
     isOpen: boolean;

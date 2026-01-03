@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { X, Search, BookOpen, Check } from 'lucide-react';
+import { X, Check } from 'lucide-react';
 import { BarcodeScanner } from '../components/scanner/BarcodeScanner';
 import { supabase } from '../lib/supabase';
 // import { searchGoogleBooks } from '../utils/coverHunt'; // Reuse or create new util
@@ -8,13 +8,13 @@ import { supabase } from '../lib/supabase';
 export const MobileAddBook = () => {
     const navigate = useNavigate();
     const [step, setStep] = useState<'scan' | 'confirm' | 'success'>('scan');
-    const [scannedIsbn, setScannedIsbn] = useState<string | null>(null);
+    const [manualIsbn, setManualIsbn] = useState<string>('');
     const [bookData, setBookData] = useState<any>(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
     const handleScan = async (isbn: string) => {
-        setScannedIsbn(isbn);
+        setManualIsbn(isbn); // Changed from setScannedIsbn to setManualIsbn
         setLoading(true);
         setError(null);
 

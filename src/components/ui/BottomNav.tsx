@@ -1,5 +1,4 @@
-import React from 'react';
-import { Home, Search, Plus, Heart, BarChart2 } from 'lucide-react';
+import { Home, Search, Heart, Plus, BarChart3 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import clsx from 'clsx';
 

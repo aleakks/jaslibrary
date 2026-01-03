@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { X, Sparkles, BookOpen } from 'lucide-react';
 import type { Book } from '../../types/book';
 import clsx from 'clsx';

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, Search, Check } from 'lucide-react';
 import { searchGoogleBooks, type GoogleBookResult } from '../../lib/google-books';
-import clsx from 'clsx';
+
 
 interface CoverSearchSheetProps {
     isOpen: boolean;

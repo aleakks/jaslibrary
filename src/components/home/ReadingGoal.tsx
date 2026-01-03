@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
 import { Trophy, Edit2, Check } from 'lucide-react';
-import clsx from 'clsx';
 
 interface ReadingGoalProps {
     booksRead: number;

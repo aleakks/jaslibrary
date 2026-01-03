@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { Trophy, BookOpen, Users, TrendingUp, BarChart3 } from 'lucide-react';
 import { useBooks } from '../hooks/useBooks';
 

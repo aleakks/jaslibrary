@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface BarcodeScannerProps {
-    onScanSuccess: (decodedText: string) => void;
-    onScanFailure?: (error: any) => void;
+    onScanSuccess: (isbn: string) => void;
+    onScanFailure?: (error: string) => void; // Keep but make optional? It is used in type but maybe not in code.
 }
 
-export const BarcodeScanner = ({ onScanSuccess, onScanFailure }: BarcodeScannerProps) => {
+export const BarcodeScanner = ({ onScanSuccess }: BarcodeScannerProps) => {
     const scannerRef = useRef<any>(null);
     const [scanError, setScanError] = useState<string | null>(null);
 
@@ -36,8 +36,8 @@ export const BarcodeScanner = ({ onScanSuccess, onScanFailure }: BarcodeScannerP
                         // console.warn(error); // Ignore scan errors they are spammy
                     }
                 );
-            } catch (err) {
-                console.error("Failed to load html5-qrcode:", err);
+            } catch {
+                // onScanFailure?.(err instanceof Error ? err.message : 'Unknown error');
                 if (isMounted) setScanError("Failed to load camera library.");
             }
         };
